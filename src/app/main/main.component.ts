@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Note } from '../note';
 
 @Component({
   selector: 'app-main',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  note: Note = {
+    id: 1,
+    name: 'First Note'
+  };
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,7 @@
-<p>main works!</p>
+<h2>{{note.name | uppercase}} Details</h2>
+<div><span>id: </span>{{note.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)] = "note.name" placeholder="name"/>
+  </label>
+</div>
