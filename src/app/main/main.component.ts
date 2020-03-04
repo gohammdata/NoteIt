@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Note } from '../note';
+import { NOTES } from '../mock-notes';
 
 @Component({
   selector: 'app-main',
@@ -7,13 +8,16 @@ import { Note } from '../note';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  note: Note = {
-    id: 1,
-    name: 'First Note'
-  };
+
+  notes = NOTES;
+  selectedNote: Note;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+  onSelect(note: Note): void{
+    this.selectedNote = note;
   }
 
 }

@@ -1,7 +1,19 @@
-<h2>{{note.name | uppercase}} Details</h2>
-<div><span>id: </span>{{note.id}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)] = "note.name" placeholder="name"/>
-  </label>
-</div>
+<h2>My Notes</h2>
+<ul class = "notes">
+  <li *ngFor = "let note of notes"
+    [class.selected]="note === selectedNote"
+    (click)="onSelect(note)">
+    <span class="badge">{{note.id}}</span> {{note.name}}
+    </li>
+    </ul>
+
+    <div *ngIf = "selectedNote">
+
+      <h2>{{selectedNote.name | uppercase }} Details </h2>
+      <div><span>id: </span>{{selectedNote.id}}</div>
+      <div>
+        <label>name:
+          <input [(ngModel)]="selectedNote.name" placeholder="name"/>
+        </label>
+        </div>
+        </div>
