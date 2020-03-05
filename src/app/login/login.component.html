@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="row">
+
+  <div class = "col-md-6 login-container">
+    <h2 style = "margin: auto">Login </h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class = "form-group">
+        <label for = "username">UserName:</label>
+        <input type="text" class="form-control" formControlName="username" id="username" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">
+          Username is required</div>
+          </div>
