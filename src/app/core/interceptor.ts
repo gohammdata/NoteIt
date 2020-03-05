@@ -5,7 +5,7 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
-  intercept(request: HttpRequest, next: HttpHandler): Observable> {
+  intercept(request: HttpRequest, next: HttpHandler):Observable {
     let token = window.localStorage.getItem('token');
     if (token) {
       request = request.clone({

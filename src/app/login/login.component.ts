@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   invalidLogin: boolean = false;
   constructor(private formBuilder: FormBuilder, private router: Router,
-  private apiService: ApiService)) { }
+  private apiService: ApiService) { }
 
   onSubmit() {
     if (this.loginForm.invalid) {
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['list-user']);
 
       }else {
-        this.invalidLogin = ture'
+        this.invalidLogin = true;
         alert(data.message);
       }
     });

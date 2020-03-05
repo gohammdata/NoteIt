@@ -18,7 +18,7 @@ export class AddUserComponent implements OnInit {
     this.addForm = this.formBuilder.group({
       id: [],
       username: ['', Validators.required],
-      password: ['', Validators.required].
+      password: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       age: ['', Validators.required],
