@@ -14,7 +14,7 @@ export class ListUserComponent implements OnInit {
   users: User[];
 
 
-  constructor(private router: Router, private apiServiece: ApiService) { }
+  constructor(private router: Router, private apiService: ApiService) { }
 
   ngOnInit() {
     if(!window.localStorage.getItem('token')) {
