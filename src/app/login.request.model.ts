@@ -1,4 +1,4 @@
-export class Login.Request {
+export class LoginRequest {
   id: number;
   firstName: string;
   lastName: string;

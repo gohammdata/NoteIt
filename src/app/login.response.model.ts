@@ -1,4 +1,4 @@
-export class Login.Response {
+export class LoginResponse {
   status : number;
   message : string;
   username : string;
